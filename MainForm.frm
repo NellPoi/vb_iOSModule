@@ -493,3 +493,19 @@ Shape15.BackColor = &H80000005
 Line5.Visible = True
 Line6.Visible = True
 End Sub
+
+Private Sub Label6_Click()
+'À¶ÑÀµã»÷ÊÂ¼þ
+End Sub
+
+Private Sub Label6_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Line6.Visible = False
+Line7.Visible = False
+Shape16.BackColor = &H80000016
+End Sub
+
+Private Sub Label6_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Line6.Visible = True
+Line7.Visible = True
+Shape16.BackColor = &H80000005
+End Sub
