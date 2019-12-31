@@ -81,3 +81,6 @@ Retained=0
 ThreadPerObject=0
 MaxNumberOfThreads=1
 DebugStartupOption=0
+
+[iCode_Windows]
+LastBuildFile=D:\Projects\vb\vb_iOSModule\VB_Project.exe

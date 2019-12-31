@@ -1,5 +1,4 @@
 VERSION 5.00
-Object = "{6FBA474E-43AC-11CE-9A0E-00AA0062BB4C}#1.0#0"; "SYSINFO.OCX"
 Begin VB.Form Form1 
    Appearance      =   0  'Flat
    BackColor       =   &H80000004&
@@ -32,21 +31,6 @@ Begin VB.Form Form1
       TabIndex        =   3
       Top             =   1080
       Width           =   4695
-      Begin SysInfoLib.SysInfo SysInfo1 
-         Left            =   3840
-         Top             =   4920
-         _ExtentX        =   1005
-         _ExtentY        =   1005
-         _Version        =   393216
-      End
-      Begin VB.CommandButton Command3 
-         Caption         =   "Command3"
-         Height          =   375
-         Left            =   3000
-         TabIndex        =   11
-         Top             =   5520
-         Width           =   1455
-      End
       Begin VB.Frame Frame2 
          Appearance      =   0  'Flat
          BackColor       =   &H80000005&
@@ -240,6 +224,8 @@ Private Sub Command2_Click()
 Cls
 End Sub
 
+
+
 Private Sub Form_Load()
 Randomize
 Dim H, M As Integer
@@ -274,4 +260,3 @@ Label4.ForeColor = &H80000002
 End Sub
 
 
-End Sub
