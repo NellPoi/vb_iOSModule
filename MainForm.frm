@@ -465,6 +465,40 @@ Label2.Caption = App.EXEName
 Label3.Caption = App.Major & "." & App.Minor & "." & App.Revision
 End Sub
 
+Private Sub Label2_Click()
+Form2.Show
+Unload MainForm
+End Sub
+
+Private Sub Label2_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Shape2.BackColor = &H80000016
+Line1.Visible = False
+Line2.Visible = False
+End Sub
+
+Private Sub Label2_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Shape2.BackColor = &H80000005
+Line1.Visible = True
+Line2.Visible = True
+End Sub
+
+Private Sub Label3_Click()
+Form2.Show
+Unload MainForm
+End Sub
+
+Private Sub Label3_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Shape2.BackColor = &H80000016
+Line1.Visible = False
+Line2.Visible = False
+End Sub
+
+Private Sub Label3_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Shape2.BackColor = &H80000005
+Line1.Visible = True
+Line2.Visible = True
+End Sub
+
 Private Sub Label4_Click()
 Unload MainForm
 Form1.Show

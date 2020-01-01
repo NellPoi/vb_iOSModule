@@ -9,6 +9,7 @@ Begin VB.Form Form1
    ClientTop       =   0
    ClientWidth     =   4650
    LinkTopic       =   "Form1"
+   LockControls    =   -1  'True
    ScaleHeight     =   7830
    ScaleWidth      =   4650
    ShowInTaskbar   =   0   'False
