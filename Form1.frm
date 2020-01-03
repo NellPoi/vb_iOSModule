@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin VB.Form Form1 
    Appearance      =   0  'Flat
-   BackColor       =   &H80000004&
+   BackColor       =   &H00FFFFFF&
    BorderStyle     =   0  'None
    Caption         =   "简单图�"
    ClientHeight    =   7830
