@@ -1,11 +1,11 @@
 VERSION 5.00
 Begin VB.Form Form2 
    BackColor       =   &H00FFFFFF&
-   BorderStyle     =   5  'Sizable ToolWindow
+   BorderStyle     =   0  'None
    Caption         =   "Form2"
    ClientHeight    =   7830
-   ClientLeft      =   60
-   ClientTop       =   405
+   ClientLeft      =   0
+   ClientTop       =   0
    ClientWidth     =   4650
    BeginProperty Font 
       Name            =   "微软雅黑"
@@ -17,6 +17,7 @@ Begin VB.Form Form2
       Strikethrough   =   0   'False
    EndProperty
    LinkTopic       =   "Form2"
+   LockControls    =   -1  'True
    MaxButton       =   0   'False
    MinButton       =   0   'False
    ScaleHeight     =   7830
@@ -202,7 +203,7 @@ Begin VB.Form Form2
    Begin VB.Label Label6 
       AutoSize        =   -1  'True
       BackStyle       =   0  'Transparent
-      Caption         =   "8:29"
+      Caption         =   "00:00"
       BeginProperty Font 
          Name            =   "微软雅黑"
          Size            =   9
@@ -216,7 +217,7 @@ Begin VB.Form Form2
       Left            =   360
       TabIndex        =   11
       Top             =   120
-      Width           =   360
+      Width           =   465
    End
    Begin VB.Label Label4 
       AutoSize        =   -1  'True
@@ -261,6 +262,10 @@ Attribute VB_Exposed = False
 '第三方文本框；ios在细节方面上启动该页面时，用户是在获取到输入框焦点且输入字符时才隐藏"Apple ID"和“密码”的提示文本
 '对此如果做到百分百1比1ios功能工程量大难以实现，IDE受限制过多
 Private Sub Form_Load()
+Dim H, M As Integer
+H = Hour(Now)
+M = Minute(Now)
+Label6.Caption = H & ":" & M
 '布局位置自动校正
 Dim p1, p2, p_h As Integer
 p1 = Line1.Y1

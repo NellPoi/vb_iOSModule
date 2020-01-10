@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin VB.Form MainForm 
    BackColor       =   &H80000004&
-   BorderStyle     =   1  'Fixed Single
+   BorderStyle     =   3  'Fixed Dialog
    Caption         =   "主窗体"
    ClientHeight    =   7860
    ClientLeft      =   45
@@ -21,7 +21,15 @@ Begin VB.Form MainForm
    MinButton       =   0   'False
    ScaleHeight     =   7860
    ScaleWidth      =   4680
+   ShowInTaskbar   =   0   'False
    StartUpPosition =   2  '屏幕中心
+   Begin VB.Image Image1 
+      Height          =   480
+      Left            =   360
+      Picture         =   "MainForm.frx":0000
+      Top             =   960
+      Width           =   480
+   End
    Begin VB.Label Label14 
       AutoSize        =   -1  'True
       BackStyle       =   0  'Transparent
@@ -208,22 +216,22 @@ Begin VB.Form MainForm
    Begin VB.Label Label6 
       AutoSize        =   -1  'True
       BackStyle       =   0  'Transparent
-      Caption         =   "蓝牙"
+      Caption         =   "计算流量"
       Height          =   255
       Left            =   720
       TabIndex        =   5
       Top             =   3120
-      Width           =   360
+      Width           =   720
    End
    Begin VB.Label Label5 
       AutoSize        =   -1  'True
       BackStyle       =   0  'Transparent
-      Caption         =   "无线局域网"
+      Caption         =   "Shell函数"
       Height          =   255
       Left            =   720
       TabIndex        =   4
       Top             =   2640
-      Width           =   900
+      Width           =   765
    End
    Begin VB.Label Label4 
       AutoSize        =   -1  'True
@@ -516,6 +524,11 @@ Line3.Visible = True
 Line5.Visible = True
 End Sub
 
+Private Sub Label5_Click()
+Form3.Show
+Unload MainForm
+End Sub
+
 Private Sub Label5_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)
 Shape15.BackColor = &H80000016
 Line5.Visible = False
@@ -529,7 +542,8 @@ Line6.Visible = True
 End Sub
 
 Private Sub Label6_Click()
-'蓝牙点击事件
+Unload MainForm
+Form4.Show
 End Sub
 
 Private Sub Label6_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)
