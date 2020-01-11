@@ -26,7 +26,6 @@ Begin VB.Form MainForm
    Begin VB.Image Image1 
       Height          =   480
       Left            =   360
-      Picture         =   "MainForm.frx":0000
       Top             =   960
       Width           =   480
    End
